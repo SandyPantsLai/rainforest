@@ -1,2 +1,2 @@
 # rainforest
-Assignment #10 Photogur Assignment for Bitmaker Labs
+Assignment #10 Rainforest Assignment for Bitmaker Labs
