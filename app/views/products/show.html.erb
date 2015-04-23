@@ -3,6 +3,7 @@
 <p><%= @product.formatted_price %></p>
 
 <% if current_user %>
+  <p>You are signed in as <%= current_user.name %>
   <h4>New Review</h4>
   <%= form_for([@product, @review]) do |f| %>
   <% if @review.errors.any? %>
