@@ -1,10 +1,4 @@
-<p><%= @product.name %></p>
-<p><%= @product.description %></p>
-<p><%= @product.formatted_price %></p>
-
-<% if current_user %>
-  <h4>New Review</h4>
-  <%= form_for([@product, @review]) do |f| %>
+<%= form_for([@product, @review]) do |f| %>
   <% if @review.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@review.errors.count, "error") %> prohibited this review from being saved:</h2>
@@ -25,8 +19,3 @@
     <%= f.submit %>
   </div>
 <% end %>
-<% else %>
-  <p>Please <%= link_to "log in", new_session_path %> to add a review for this product.</p>
-<% end %>
-
-<p><%= link_to "Back", products_path %></p>
